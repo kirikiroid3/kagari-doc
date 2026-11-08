@@ -75,11 +75,11 @@
     "provider": "local"
   },
   "source": {
-    "github": "kirikiroid3/kagari",
+    "github": "kirikiroid3/kagari-doc",
     "branch": "main"
   },
   "editLink": {
-    "pattern": "https://github.com/kirikiroid3/kagari/edit/{branch}/docs/site/{path}"
+    "pattern": "https://github.com/kirikiroid3/kagari-doc/edit/{branch}/{path}"
   },
   "docsNav": [
     {
