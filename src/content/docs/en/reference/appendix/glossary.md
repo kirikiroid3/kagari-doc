@@ -161,7 +161,7 @@ it. Terms of the standard library link to the *STD Reference*.
 - **Root page.** A base mode without a running game, such as Title, Gallery or Credits.
   [The Game System](../concepts/system.md)
 - **Runtime.** The program that plays a built game; the desktop runtime implements the runtime
-  profile `native_v0`. [The Runtime](../tools/runtime.md)
+  profiles `native_v0` and `native_unstable`. [The Runtime](../tools/runtime.md)
 - **Save.** The record of a running story in a save slot: its trace, from which loading replays
   the story. [Saves, Replay and Determinism](../concepts/saves.md)
 - **Scene.** A `pushdown fn` marked `#[scene]`: the only kind of function that may run steps and

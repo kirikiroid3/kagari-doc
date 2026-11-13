@@ -18,15 +18,20 @@ is a manifest error. See [Projects](../../reference/tools/projects.md).
 
 |Profile|Runtime|
 |---|---|
-|`native_v0`|The desktop runtime (`kagari-desktop-runtime`), version 0|
+|`native_v0`|The desktop runtime (`kagari-desktop-runtime`), version 0. Frozen: the std items and asset formats it covers never change|
+|`native_unstable`|The desktop runtime as it is developed. New std items and asset formats are added here, never to `native_v0`, so what it covers can change from one release to the next|
 
-`native_v0` is currently the only profile.
+The desktop runtime implements both profiles. List `native_unstable` only when a game needs
+something `native_v0` lacks; such a game needs a runtime at least as new as the toolchain that
+built it.
 
-## `native_v0` support matrix
+## Support matrix
+
+The matrix holds for both profiles: `native_unstable` does not differ from `native_v0` yet.
 
 ### By module
 
-|Module|Support in `native_v0`|
+|Module|Support|
 |---|---|
 |`std` (types, traits, `asset`, `system_font`)|Supported|
 |`std::time`|Supported|
@@ -79,8 +84,8 @@ and role, with the line in the `.wgsl` file when the error lies there:
 error: shader `shader/broken.wgsl` (color): line 4: no definition in scope for identifier: `undefined_name`
 ```
 
-Because `native_v0` is the only profile and `runtime-compatibility` cannot be empty, every
-`kagari build` checks against `native_v0`: a project cannot opt out of this check today.
+Because `runtime-compatibility` cannot be empty, every `kagari build` checks against at least one
+profile: a project cannot opt out of this check.
 
 **Missing std items fail at startup.** A `.kagari` file built against a newer `std` may call a
 builtin the installed runtime does not provide. The runtime then refuses to start the game with

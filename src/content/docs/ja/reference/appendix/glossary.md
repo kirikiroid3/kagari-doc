@@ -97,7 +97,7 @@ title: "用語集"
 - **行き詰まり選択肢**（stuck choice）。すべてのアームのガードが偽になる状態で到達できてしまう `choice!` です。エラー `E5003` になります。[ステップ](../concepts/steps.md)
 - **呼び出し規則**（call rules）。どの関数種別からどの関数種別を呼べるかを定めた規則です。`fn` から `pushdown fn` は呼べず、`pushdown fn` から `fn` も呼べません。[関数種別](../concepts/kinds.md)
 - **乱数の抽選**（random draw）。物語が `rng_choose` で引く値です。乱数生成器のシードはセーブに含まれ、解析では抽選で出うるすべての値を調べます。[セーブ、再生、決定性](../concepts/saves.md)
-- **ランタイム**（runtime）。ビルドしたゲームを実行するプログラムです。デスクトップ版のランタイムは、ランタイムプロファイル `native_v0` を実装しています。[ランタイム](../tools/runtime.md)
+- **ランタイム**（runtime）。ビルドしたゲームを実行するプログラムです。デスクトップ版のランタイムは、ランタイムプロファイル `native_v0` と `native_unstable` を実装しています。[ランタイム](../tools/runtime.md)
 - **リアクティブ**（reactive）。UI の属性や要素が、読み取っているシグナルなどのリアクティブな値が変わるたびに再評価されることです。[ゲームシステム](../concepts/system.md)
 - **リサイズ**（resize）。`Natural`、`Contain(s)`、`Cover(s)` など、画像レイヤーが内容をどの大きさで表示するかの指定です。リサイズによってレイヤーの矩形が決まり、`MAIN` レイヤーの矩形がエンティティの大きさになります。[`std::screen`](../../std/screen.md#resize)
 - **ルートページ**（root page）。Title、Gallery、Credits のように、実行中のゲームを持たない、スタックの一番下のモードです。[ゲームシステム](../concepts/system.md)

@@ -126,7 +126,7 @@ font's license before you ship it.
 | Key | Type | Default | Meaning |
 | --- | ---- | ------- | ------- |
 | `targets` | array of strings | `["v0"]` | The targets `kagari build` builds. Supported: `v0`. Must not be empty; duplicates are ignored. |
-| `runtime-compatibility` | array of strings | `["native_v0"]` | The [runtime profiles](#runtime-profiles) whose decoders every asset must suit. Supported: `native_v0`. Must not be empty; duplicates are ignored. |
+| `runtime-compatibility` | array of strings | `["native_v0"]` | The [runtime profiles](#runtime-profiles) whose decoders every asset must suit. Supported: `native_v0`, `native_unstable`. Must not be empty; duplicates are ignored. |
 | `out-dir` | string (path) | `"target"` | The output directory. |
 | `state-cap` | integer | `200000` | The [compiler option](#compiler-options) `state-cap`. |
 | `recursion-depth` | integer | `2048` | The compiler option `recursion-depth`. |
@@ -201,9 +201,11 @@ entries of the archives before it. `kagari build` writes only base archives.
 A **runtime profile** names the set of decoders a runtime has. Before it writes anything,
 `kagari build` checks every referenced asset against every profile in
 `build.runtime-compatibility`. Each asset is identified by its content, not its file extension.
-The only profile is `native_v0`, the [desktop runtime](./runtime.md):
+There are two profiles, both implemented by the [desktop runtime](./runtime.md): `native_v0`,
+which is frozen and never changes, and `native_unstable`, which receives every format added after
+the freeze. They currently decode the same formats:
 
-| Asset kind | Formats `native_v0` decodes |
+| Asset kind | Formats `native_v0` and `native_unstable` decode |
 | ---------- | --------------------------- |
 | Image | PNG (APNG shows its default image), baseline and progressive JPEG, lossy, lossless and extended (alpha or metadata) WebP, BMP (uncompressed, RLE or bitfields), still JPEG XL (RGB or greyscale) |
 | Audio, voice | Ogg Vorbis, Ogg FLAC, FLAC, WAV (PCM or IEEE float), MP3, mono or stereo AAC-LC (ADTS `.aac`, or MP4/M4A), mono or stereo ALAC (MP4/M4A) |

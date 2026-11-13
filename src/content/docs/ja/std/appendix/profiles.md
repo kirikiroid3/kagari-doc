@@ -15,15 +15,18 @@ runtime-compatibility = ["native_v0"]
 
 |プロファイル|ランタイム|
 |---|---|
-|`native_v0`|デスクトップ版ランタイム（`kagari-desktop-runtime`）のバージョン 0|
+|`native_v0`|デスクトップ版ランタイム（`kagari-desktop-runtime`）のバージョン 0。凍結済みで、対応する標準ライブラリのアイテムとアセット形式は今後も変わりません|
+|`native_unstable`|開発中のデスクトップ版ランタイム。新しい標準ライブラリのアイテムやアセット形式は `native_v0` ではなくこちらに追加するので、対応範囲はリリースごとに変わることがあります|
 
-現時点のプロファイルは `native_v0` だけです。
+デスクトップ版ランタイムは両方のプロファイルを実装しています。`native_unstable` を指定するのは、`native_v0` にない機能がゲームに必要な場合だけにしてください。そのゲームを動かすには、ビルドに使ったツールチェーンと同じかそれより新しいランタイムが必要です。
 
-## `native_v0` の対応状況 {#native_v0-support-matrix}
+## 対応状況 {#support-matrix}
+
+以下の表は両方のプロファイルに当てはまります。現時点では `native_unstable` と `native_v0` に違いはありません。
 
 ### モジュールごとの対応 {#by-module}
 
-|モジュール|`native_v0` での対応|
+|モジュール|対応状況|
 |---|---|
 |`std`（型、トレイト、`asset`、`system_font`）|対応|
 |`std::time`|対応|
@@ -73,6 +76,6 @@ AV1 にするなら `-c:v libsvtav1` を、H.264 にするなら `-c:v libx264 -
 error: shader `shader/broken.wgsl` (color): line 4: no definition in scope for identifier: `undefined_name`
 ```
 
-プロファイルは `native_v0` しかなく、`runtime-compatibility` は空にできないので、`kagari build` は必ず `native_v0` に照らして検査します。現時点では、この検査をプロジェクト側で外すことはできません。
+`runtime-compatibility` は空にできないので、`kagari build` は必ず 1 つ以上のプロファイルに照らして検査します。この検査をプロジェクト側で外すことはできません。
 
 **標準ライブラリのアイテムが足りないと起動時に失敗します。** 新しい `std` でビルドした `.kagari` ファイルは、インストール済みのランタイムが提供していない組み込みのアイテムを呼び出すことがあります。その場合、ランタイムは「the bytecode imports `…`, which this runtime does not provide」と出してゲームの起動を拒否します。ランタイムが知らないエンジン機能を必要とする `.kagari` ファイルも、同じように拒否します。ゲームは、配布するランタイムと対応するツールチェーンでビルドしてください。

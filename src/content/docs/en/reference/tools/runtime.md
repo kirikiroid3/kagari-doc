@@ -4,8 +4,8 @@ title: "The Runtime"
 
 `kagari-desktop-runtime` runs a game built by `kagari build` on Windows, macOS and Linux. It
 opens a window, draws with the GPU, plays audio, and reads the keyboard, mouse and gamepads. It
-implements the runtime profile `native_v0`. With `--headless` it runs without a window, driven by
-a script; see [Headless Mode](./headless.md).
+implements the runtime profiles `native_v0` and `native_unstable`. With `--headless` it runs
+without a window, driven by a script; see [Headless Mode](./headless.md).
 
 ## Running a game
 
@@ -88,14 +88,14 @@ written atomically (to a temporary file, then renamed), so a crash during a save
 the previous file. When no data directory can be found, the runtime logs a warning and settings
 and saves are not kept.
 
-## Runtime profile `native_v0`
+## Runtime profiles
 
-The desktop runtime implements the runtime profile `native_v0`: the whole std. Its
-asset formats are listed in [Runtime profiles](./projects.md#runtime-profiles); `kagari build`
-rejects assets it cannot decode and shaders that do not validate, so a game that builds with
-`runtime-compatibility = ["native_v0"]` has no unsupported asset at run time. Shaders need a GPU
-with storage buffers, and motion shaders also compute shaders; on a GPU without them the runtime
-logs a warning and draws those effects as if they were not set. See also
+The desktop runtime implements the runtime profiles `native_v0` (frozen) and `native_unstable`:
+the whole std. Their asset formats are listed in [Runtime profiles](./projects.md#runtime-profiles);
+`kagari build` rejects assets a listed profile cannot decode and shaders that do not validate, so a
+game that builds with `runtime-compatibility = ["native_v0"]` has no unsupported asset at run
+time. Shaders need a GPU with storage buffers, and motion shaders also compute shaders; on a GPU
+without them the runtime logs a warning and draws those effects as if they were not set. See also
 [Runtime Profiles](../../std/appendix/profiles.md) in the STD Reference.
 
 Movies are decoded with the GPU's video decoder where the system offers one (VA-API on Linux,
