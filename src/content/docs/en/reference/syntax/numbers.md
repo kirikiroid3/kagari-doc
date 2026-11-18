@@ -1,5 +1,6 @@
 ---
 title: "Numbers"
+description: "The number types: bounded integers for the story, Rust's integers, and the exact Decimal and Rat types, with their literals, arithmetic and conversions. There are no floats."
 ---
 
 There are two families of numbers. **Bounded integers** `Int<lo, hi>` are the only numbers the

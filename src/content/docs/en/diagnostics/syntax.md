@@ -1,5 +1,6 @@
 ---
 title: "Syntax (E0xxx)"
+description: "The syntax error the parser reports, and why fixing it first usually clears the diagnostics that follow."
 ---
 
 Syntax errors are reported by the parser before any name resolution or type checking happens. A file with syntax errors is still parsed as far as possible, so later diagnostics may also appear, but fixing the syntax errors first usually clears them.

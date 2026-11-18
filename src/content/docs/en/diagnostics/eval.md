@@ -1,5 +1,6 @@
 ---
 title: "Constant Evaluation (E4xxx)"
+description: "Errors from running const code at compile time: overflow, division by zero, an exceeded budget, indexes out of range, and invalid motions, easings and marks."
 ---
 
 The compiler runs `const` code at compile time. It evaluates constants, tabulates `const fn` calls from the story, and builds screens and text marks. These diagnostics report faults found during that evaluation. Faults in a render function are reported at the step that uses it.

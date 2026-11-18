@@ -1,5 +1,6 @@
 ---
 title: "Types (E2xxx)"
+description: "Type errors: mismatched types, bounded-integer arithmetic, conversions, fields and methods, calls, patterns and match exhaustiveness."
 ---
 
 Type diagnostics come from checking item signatures (types, constants, aliases, bounds) and from type inference of function and scene bodies: mismatched types, bounded-integer arithmetic, conversions, fields and methods, calls, patterns and match exhaustiveness. Every code here is an error except `W2039`.

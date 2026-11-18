@@ -1,5 +1,6 @@
 ---
 title: "Entry Scenes and Endings"
+description: "How the game system starts the story at an entry scene, passes it arguments, and learns which ending was reached."
 ---
 
 ## Entry scenes

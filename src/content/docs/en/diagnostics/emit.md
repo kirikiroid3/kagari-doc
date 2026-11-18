@@ -1,5 +1,6 @@
 ---
 title: "Emit (E7xxx)"
+description: "Errors from writing the .kagari file at the end of a build: a missing main, a function that is too large, and invalid bytecode."
 ---
 
 The last step of `kagari build` writes the checked program into the `.kagari` file and verifies

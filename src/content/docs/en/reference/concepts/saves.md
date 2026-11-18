@@ -1,5 +1,6 @@
 ---
 title: "Saves, Replay and Determinism"
+description: "What a save contains, how loading replays it, what a patch may change without breaking old saves, and how rewind, save slots and determinism work."
 ---
 
 A save in Kagari is not a dump of memory. It is the record of the player's selections from the

@@ -1,5 +1,6 @@
 ---
 title: "出力 (E7xxx)"
+description: "ビルドの最後に .kagari ファイルを書き出すときのエラーです。main がない、関数が大きすぎる、バイトコードが不正、の三つがあります。"
 sidebar:
   label: "バイトコード生成 (E7xxx)"
 ---

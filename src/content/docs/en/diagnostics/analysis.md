@@ -1,5 +1,6 @@
 ---
 title: "Story Analysis (E5xxx)"
+description: "Errors and warnings of the story analysis: loops without a step, stuck choices, inconsistent screens, and unreachable scenes, steps and variables."
 ---
 
 After type checking, Kagari explores the whole story: every path from each entry scene, with every value the story variables can hold. This finds loops and recursions that never stop at a step, choices that can offer nothing, screens that depend on the path taken, and code or variables that never matter. When the analysis cannot finish, it says so and does not report unreachable steps or scenes.

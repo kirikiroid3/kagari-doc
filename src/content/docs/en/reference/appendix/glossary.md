@@ -1,5 +1,6 @@
 ---
 title: "Glossary"
+description: "Definitions of the terms the reference uses, from analysis cache and arm to trace and tween, each linked to the chapter that explains it."
 ---
 
 Terms used in this reference, in alphabetical order. Each entry links to the chapter that defines

@@ -1,5 +1,6 @@
 ---
 title: "Attributes"
+description: "The five attributes of the language (scene, entry, must_use, shader_arg and builtin): where each is allowed and what it means."
 ---
 
 An attribute is written `#[name]` directly before an item. Kagari has exactly five attributes and

@@ -1,5 +1,6 @@
 ---
 title: "About This Reference"
+description: "How to read the STD Reference: the structure of a module page, the stability index, kind badges, builtin items, signature conventions and profile notes."
 ---
 
 The *STD Reference* documents `std`, the standard library of Kagari. It lists every public item

@@ -1,5 +1,6 @@
 ---
 title: "kagari CLI"
+description: "kagari ツールチェインの全コマンドを、オプションと終了ステータスとともに説明します。init、check、build、clean、release、fmt、disasm、lsp、debug、dap があります。"
 ---
 
 `kagari` は Kagari のツールチェインです。プロジェクトの作成、検査、ビルド、出力の削除、整形のほか、プレイヤー向けのパッケージ作成、`.kagari` ファイルの逆アセンブル、言語サーバーの起動、物語のデバッグもこのコマンドで行います。

@@ -1,5 +1,6 @@
 ---
 title: "Scenes and Instant Procedures"
+description: "How the story moves: scenes that call each other and return, instant procedures, control flow, termination, and random choices."
 ---
 
 The story is made of **scenes**, `pushdown fn` marked `#[scene]`, and **instant procedures**, the

@@ -1,5 +1,6 @@
 ---
 title: "Quick Reference"
+description: "The language on one page: function kinds, attributes, special types, forms, story items, control flow in the story and the most common std calls."
 ---
 
 A one-page summary of the language. Each section links to the chapter with the full rules.

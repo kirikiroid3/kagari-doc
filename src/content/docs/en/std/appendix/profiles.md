@@ -1,5 +1,6 @@
 ---
 title: "Runtime Profiles"
+description: "What each runtime profile supports: the std items it implements and the asset formats it decodes, and what happens when a game uses an unsupported item."
 ---
 
 A **runtime profile** names what a runtime provides: which std items it implements and which asset

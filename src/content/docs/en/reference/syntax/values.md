@@ -1,5 +1,6 @@
 ---
 title: "Values, References and Closures"
+description: "The memory model: value semantics, places and mutability, references, and closures, without lifetimes, a borrow checker or moves."
 ---
 
 *Tentative.* This chapter fixes the memory model. It is simpler than Rust's on purpose: no

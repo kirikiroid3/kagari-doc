@@ -1,5 +1,6 @@
 ---
 title: "Tutorial"
+description: "Getting started with Kagari: install the tools, then write and run a first visual novel. The walkthrough is still being written."
 sidebar:
   label: "Getting Started"
 ---

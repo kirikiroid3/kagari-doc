@@ -1,5 +1,6 @@
 ---
 title: "Using the Standard Library"
+description: "A map of the standard library: what each module is for, what the prelude imports, and the design rules the library follows."
 ---
 
 `std` is the library every Kagari program is compiled with. It is written in Kagari; items marked

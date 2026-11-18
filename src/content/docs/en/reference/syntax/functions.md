@@ -1,5 +1,6 @@
 ---
 title: "Functions"
+description: "Function declarations: kinds, parameters, return types, generics, methods, closures as arguments, function pointers, recursion and main."
 ---
 
 A function is an item that takes parameters and computes a result. Every function has a

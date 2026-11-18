@@ -1,5 +1,6 @@
 ---
 title: "The Game System"
+description: "Everything around the story: the title screen, menus, save and load pages, settings, the backlog and key bindings, built from modes, components and signals."
 ---
 
 The game system is everything around the story: the title screen, save and load pages, settings,

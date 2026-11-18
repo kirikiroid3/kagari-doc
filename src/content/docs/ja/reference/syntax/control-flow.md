@@ -1,5 +1,6 @@
 ---
 title: "制御フローとループ"
+description: "if、match、loop、while、for、break、continue、return とループのラベル、そして関数種別ごとにループでできることを説明します。"
 ---
 
 Kagari の制御フローは、Rust と同じ構造化された制御フローです。`if`、`if let`、`match`、`loop`、`while`、`while let`、`for`、`break`、`continue`、`return` があり、ループにはラベルを付けられます。`goto` はありません。ループの中で何ができるかは、そのループを含む関数の[種別](../concepts/kinds.md)によって変わります。規則は[最後の節](#rules-by-function-kind)にまとめてあります。

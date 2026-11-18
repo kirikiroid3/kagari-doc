@@ -1,5 +1,6 @@
 ---
 title: "Builtin Types"
+description: "The types the compiler knows by name: opaque handles, numbers, Vec, Range, Option and Result, function pointers and closures, and Duration."
 ---
 
 Most types a game uses are ordinary declarations in `std`, written in Kagari like your own. A few

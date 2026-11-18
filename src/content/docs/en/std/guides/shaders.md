@@ -1,5 +1,6 @@
 ---
 title: "Writing Shaders"
+description: "How to write a WGSL shader for each of the six roles: what the file defines, its arguments, effect time, tweening and checking."
 ---
 
 A shader is a WGSL file in the asset directory that the renderer runs on the GPU. This guide shows

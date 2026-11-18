@@ -1,5 +1,6 @@
 ---
 title: "Expressions and Statements"
+description: "Every expression and statement: blocks, literals, paths, operators, assignment, calls, fields and indexing, ranges, closures and the ? operator."
 ---
 
 Kagari is an expression language with Rust's syntax: a block is an expression, `if` and `match`

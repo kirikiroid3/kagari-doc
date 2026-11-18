@@ -1,5 +1,6 @@
 ---
 title: "The Story Machine"
+description: "The execution model of the story and its story variables (the flags and counters of a playthrough), with a worked example."
 ---
 
 The **story** is the set of `pushdown fn` of a game. This chapter gives its execution model and

@@ -1,5 +1,6 @@
 ---
 title: "Kinds (E3xxx)"
+description: "Errors about what each kind of function may call, read and hold: steps outside scenes, unbounded loops, non-finite story data, references, closures and forms."
 ---
 
 These checks cover the *kind* of each function and item: plain `fn` code, `const` code, `pushdown fn` story code and `#[scene]` scenes each have rules about what they may call, read and hold. These diagnostics also cover story variables, second-class references and closures, and the shape of `choice!` and text forms.

@@ -1,5 +1,6 @@
 ---
 title: "Editor Support"
+description: "The language server, the formatter, the debug adapter and the Zed extension, and how to set up another editor."
 ---
 
 Kagari ships four pieces for editors:

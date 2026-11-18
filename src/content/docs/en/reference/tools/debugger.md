@@ -1,5 +1,6 @@
 ---
 title: "The Debugger"
+description: "How to inspect and move around a story with kagari debug: positions, commands, breakpoints and stepping, a game in a window, hot swap and editors."
 ---
 
 The story debugger moves around the story and answers questions about it without playing it by

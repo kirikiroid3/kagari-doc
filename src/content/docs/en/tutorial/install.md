@@ -1,5 +1,6 @@
 ---
 title: "Installing Kagari"
+description: "How to install, update and uninstall the kagari toolchain and the desktop runtime on Linux, Windows, macOS and NixOS."
 ---
 
 Kagari is two programs:

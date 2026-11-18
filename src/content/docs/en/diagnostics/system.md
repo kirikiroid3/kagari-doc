@@ -1,5 +1,6 @@
 ---
 title: "Game System (E6xxx)"
+description: "Errors and warnings about the modes of the game system: modes that cannot be reached or left, and a mode stack that can grow without bound."
 ---
 
 The `System` built by `main()` defines the game's modes: root pages, overlays, dialogs, the game mode and its overlays. Kagari builds a graph of how the `nav::*` handlers move between these modes. It checks that every mode can be reached, that every mode can be left, and that the mode stack stays bounded.

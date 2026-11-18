@@ -1,5 +1,6 @@
 ---
 title: "Lexical Structure"
+description: "How source text is split into tokens: whitespace, comments, identifiers, keywords, literals, labels and punctuation."
 ---
 
 A source file is split into **tokens**: identifiers, keywords, literals, labels and punctuation.

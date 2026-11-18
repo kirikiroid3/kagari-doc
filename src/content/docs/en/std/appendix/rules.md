@@ -1,5 +1,6 @@
 ---
 title: "Compiler Rules for std Items"
+description: "The rules the compiler enforces for std items beyond their signatures, each with the diagnostic reported when it is broken."
 ---
 
 This appendix lists the rules the compiler enforces for std items beyond their signatures: which

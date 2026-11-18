@@ -1,5 +1,6 @@
 ---
 title: "System Recipes"
+description: "Worked examples of a game system: a title page, the game view, settings, save and load pages, a CG gallery, a music room, replay scenes and a backlog."
 ---
 
 Worked examples of a game system: the program and its title page, the game view, a settings page,

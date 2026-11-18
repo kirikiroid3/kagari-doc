@@ -1,5 +1,6 @@
 ---
 title: "Function Kinds"
+description: "The three kinds of function (fn, const fn and pushdown fn), which kind may call which, and the finite types the story may hold."
 ---
 
 Every function has one of three **kinds**. The kind is written before `fn`, and it is the only

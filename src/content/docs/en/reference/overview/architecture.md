@@ -1,5 +1,6 @@
 ---
 title: "Architecture"
+description: "The big picture: how a game goes from source files to a running game, what each part is written in, and how the parts talk to each other."
 ---
 
 This chapter is the big picture: how a Kagari game goes from source files to a running game, what

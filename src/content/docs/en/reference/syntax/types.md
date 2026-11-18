@@ -1,5 +1,6 @@
 ---
 title: "Types"
+description: "How types are written and checked: primitives, Text and String, tuples, arrays, structs and enums, generics, trait bounds, equality, finite types and inference."
 ---
 
 Kagari is statically typed. Every value has one type, known at compile time. Types are written out

@@ -1,5 +1,6 @@
 ---
 title: "Source Files and Modules"
+description: "How a game is split into files and modules: .kis and .kix files, the root file, paths, visibility, use, the standard library, the prelude and assets."
 ---
 
 A game is a tree of **modules**, as in Rust. Each module is a source file, an inline `mod { … }`

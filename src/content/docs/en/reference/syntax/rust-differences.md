@@ -1,5 +1,6 @@
 ---
 title: "Differences from Rust"
+description: "For Rust programmers: the parts of Rust that Kagari leaves out, what replaces them, and the constructs that behave differently."
 ---
 
 Kagari's syntax is a subset of Rust's with a few additions, and where this reference does not say

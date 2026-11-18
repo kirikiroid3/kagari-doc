@@ -1,5 +1,6 @@
 ---
 title: "Language Traits"
+description: "The fixed set of traits the standard library declares, what each one allows, and why games cannot declare or implement traits."
 ---
 
 Traits in Kagari are not a tool for games. The standard library declares a fixed set of traits,

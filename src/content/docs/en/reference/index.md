@@ -1,5 +1,6 @@
 ---
 title: "Introduction"
+description: "What Kagari is, who this reference is for, how it is organized, and a first look at a scene written in the language."
 ---
 
 The *Language Reference* describes how to write and ship a visual novel with Kagari: the concepts

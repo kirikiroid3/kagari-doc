@@ -1,5 +1,6 @@
 ---
 title: "Diagnostics"
+description: "How compiler errors and warnings are numbered, what the severities mean, how they are printed, and how to look a code up."
 ---
 
 Every diagnostic of the Kagari compiler has a numbered code. The pages in this part list each code

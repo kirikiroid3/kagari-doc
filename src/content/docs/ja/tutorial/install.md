@@ -1,5 +1,6 @@
 ---
 title: "Kagari のインストール"
+description: "kagari ツールチェインとデスクトップ向けランタイムを Linux、Windows、macOS、NixOS にインストール、更新、アンインストールする方法を説明します。"
 ---
 
 Kagari は次の 2 つのプログラムで構成されています。

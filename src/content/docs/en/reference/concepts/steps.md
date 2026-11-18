@@ -1,5 +1,6 @@
 ---
 title: "Steps"
+description: "The points where the story waits for the player: lines of text written with s!, choices written with choice!, their text and effects, and step IDs."
 ---
 
 A **step** is a point where the story stops and waits for the player. There are two kinds of

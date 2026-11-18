@@ -1,5 +1,6 @@
 ---
 title: "The kagari CLI"
+description: "Every command of the kagari toolchain with its options and exit statuses: init, check, build, clean, release, fmt, disasm, lsp, debug and dap."
 ---
 
 `kagari` is the Kagari toolchain: it creates, checks, builds, cleans and formats projects,

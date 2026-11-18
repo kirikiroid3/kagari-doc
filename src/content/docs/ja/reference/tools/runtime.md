@@ -1,5 +1,6 @@
 ---
 title: "ランタイム"
+description: "ビルドしたゲームを kagari-desktop-runtime で実行する方法を説明します。コマンドラインオプション、ウィンドウ、データディレクトリ、ログ、エラーで停止したときの挙動、動作環境を扱います。"
 ---
 
 `kagari-desktop-runtime` は、`kagari build` でビルドしたゲームを Windows、macOS、Linux 上で動かすプログラムです。ウィンドウを開いて GPU で描画し、音声を再生し、キーボード・マウス・ゲームパッドの入力を受け取ります。対応するランタイムプロファイルは `native_v0` と `native_unstable` です。`--headless` を付けるとウィンドウを開かず、スクリプトの指示どおりに動きます（[ヘッドレスモード](./headless.md)を参照）。

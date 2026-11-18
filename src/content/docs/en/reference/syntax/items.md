@@ -1,5 +1,6 @@
 ---
 title: "Items"
+description: "The declarations of a module: structs, enums, constants, statics, type aliases, impl blocks, traits, modules and imports."
 ---
 
 An **item** is a declaration that belongs to a module: a function, a type, a constant, a static,

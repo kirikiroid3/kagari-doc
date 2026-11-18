@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description: "The layout of a project, every key of kagari.toml, build targets and output directories, assets and archives, and how to ship a game."
 ---
 
 A Kagari game is a **project**: a directory with a `kagari.toml` manifest, the source files, and

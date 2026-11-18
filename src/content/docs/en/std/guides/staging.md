@@ -1,5 +1,6 @@
 ---
 title: "Staging Recipes"
+description: "Recipes for staging a scene: opening a scene, a dip to black, a flashback, a still (CG), a chapter card, an item popup, and cues tied to the text."
 ---
 
 > **Stability:** Stable — recipes built only from current `std` items.

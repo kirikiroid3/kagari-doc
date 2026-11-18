@@ -1,5 +1,6 @@
 ---
 title: "Patterns"
+description: "The patterns of let, match, if let and parameters, the exhaustiveness check of match, and which places need an irrefutable pattern."
 ---
 
 A pattern describes the shape of a value and binds variables to its parts. Patterns are Rust's,

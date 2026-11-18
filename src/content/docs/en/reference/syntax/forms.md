@@ -1,5 +1,6 @@
 ---
 title: "Forms"
+description: "The fixed syntax of .kix files: s! for a line, choice! for a menu, t! for text with ruby and effects, and the UI forms, with what each desugars to."
 ---
 
 A **form** is fixed syntax that builds a step, a text or a piece of UI: `s!(…)`, `choice!{…}`,

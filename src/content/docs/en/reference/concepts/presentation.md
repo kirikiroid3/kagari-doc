@@ -1,5 +1,6 @@
 ---
 title: "Presentation"
+description: "How render functions change the screen when a step is entered: entities, animated changes, keyframes, and the consistency check on screens."
 ---
 
 The story says *when* the screen changes; render functions say *how*. This chapter gives the

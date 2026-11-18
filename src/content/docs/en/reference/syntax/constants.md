@@ -1,5 +1,6 @@
 ---
 title: "Constant Expressions"
+description: "What counts as a constant expression, how const fn calls are evaluated at compile time, where constants are required, and the errors evaluation reports."
 ---
 
 A **constant expression** is an expression the compiler computes at compile time. Constants carry

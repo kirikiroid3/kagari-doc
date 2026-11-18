@@ -1,5 +1,6 @@
 ---
 title: "The Runtime"
+description: "How to run a built game with kagari-desktop-runtime: command-line options, the window, the data directory, logging, what happens when the game stops with an error, and system requirements."
 ---
 
 `kagari-desktop-runtime` runs a game built by `kagari build` on Windows, macOS and Linux. It

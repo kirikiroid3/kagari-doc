@@ -1,5 +1,6 @@
 ---
 title: "Headless Mode"
+description: "How to run a game without a window from a script that drives input and the clock and takes screenshots, for automated tests and CI."
 ---
 
 Headless mode runs a game without a window, audio device or gamepads. A script drives the input

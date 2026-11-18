@@ -1,5 +1,6 @@
 ---
 title: "Philosophy: Analyzable by Construction"
+description: "Why Kagari restricts story code so that the compiler can prove facts about a story without playing it, what a studio gains, and what it gives up."
 ---
 
 Kagari is built so that the compiler can answer questions about a story with certainty, by

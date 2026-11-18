@@ -1,5 +1,6 @@
 ---
 title: "Modules, Items and Names (E1xxx)"
+description: "Errors from the module tree, item declarations and name resolution: missing files, unknown attributes, unresolved names, imports and labels."
 ---
 
 These errors come from building the module tree, lowering item declarations, and resolving names, imports, labels and paths. They are reported before type checking, and an unresolved name here often suppresses follow-on type errors.

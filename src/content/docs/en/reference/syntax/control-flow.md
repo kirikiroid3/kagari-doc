@@ -1,5 +1,6 @@
 ---
 title: "Control Flow and Loops"
+description: "if, match, loop, while, for, break, continue and return, loop labels, and what a loop may do in each kind of function."
 ---
 
 Kagari's control flow is Rust's structured control flow: `if`, `if let`, `match`, `loop`, `while`,
