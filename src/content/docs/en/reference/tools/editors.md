@@ -7,7 +7,7 @@ Kagari ships four pieces for editors:
 
 | Piece | What it gives | Where |
 | ----- | ------------- | ----- |
-| Language server | Diagnostics, formatting, go to definition, hover, document outline | `kagari lsp` |
+| Language server | Diagnostics, formatting, go to definition, hover, document outline, rename, completion | `kagari lsp` |
 | Debug adapter | Breakpoints, stepping, the call stack and variables of the story, and the debugger's commands | `kagari dap` |
 | Tree-sitter grammar | Syntax highlighting and structure for `.kis` and `.kix` | `tooling/tree-sitter-kagari` |
 | Zed extension | All of the above, ready to install in Zed | `tooling/zed-kagari` |
@@ -26,11 +26,45 @@ ending in `.kis` and `.kix`.
 | ------- | ----------- | ----- |
 | Diagnostics | `textDocument/publishDiagnostics` | The same diagnostics as `kagari check`, for every file of the project, including files that are not open. Recomputed in the background after each edit. |
 | Formatting | `textDocument/formatting` | The same output as `kagari fmt`. A file with syntax errors is left unchanged. |
-| Go to definition | `textDocument/definition` | Works on paths, local bindings and method calls. Jumps into std declarations too (see below). Field accesses and `use` paths are not navigable. |
+| Go to definition | `textDocument/definition` | Works on paths and each of their segments, local bindings, method calls, fields and `use` paths. Jumps into std declarations too (see below). |
 | Hover | `textDocument/hover` | The header (signature) or type of what is under the cursor, followed by its `///` doc comment. |
 | Document symbols | `textDocument/documentSymbol` | The items of the file, nested as written, with enum variants. Editors show it as the outline. |
+| Rename | `textDocument/rename`, `textDocument/prepareRename` | See [Rename](#rename). |
+| Completion | `textDocument/completion` | See [Completion](#completion). |
 
 Other requests are not supported. The server syncs whole documents: it sees your unsaved text.
+
+### Rename
+
+Renaming a name changes its definition and every place in the project that refers to it. It
+works on local bindings, generic parameters, items (functions, methods, types, constants,
+statics), inline modules, enum variants and struct fields.
+
+- A field written in shorthand is spelled out: renaming the field `n` turns `Counter { n }` into
+  `Counter { count: n }`, and renaming the variable `n` turns it into `Counter { n: count }`.
+- Places that use another spelling are left as they are: a name imported under an alias with
+  `use … as …`, and `Self`.
+
+A rename is refused, with a message, for std items, for `self`, for a module that is a file
+(rename the file instead), for a name that a `use` imports together with another definition of
+the same name (a module and a constant, say), and when the new name is not an identifier or is a
+keyword.
+
+### Completion
+
+What the server offers depends on what precedes the cursor:
+
+| Position | Offered |
+| -------- | ------- |
+| After `value.` | The fields and methods of the value's type |
+| After `path::`, and in `use path::{…}` | What the module contains, or the variants and associated items of a type, or the items of a trait |
+| At a field of a struct expression (`Counter { … }`) | The fields not written yet, then the names in scope |
+| At a field of a struct pattern | The fields not written yet |
+| Anywhere else | Local bindings, generic parameters, the items in scope (including imports), `std`, the prelude and the primitive types; after `:` in an annotation or after `->`, only types |
+
+Each completion shows the item's header or the variable's type, and its `///` doc comment.
+Completion triggers on `.` and `:`. Keywords are not offered, and nothing is offered where a new
+name is being written (`let x`, `fn f`).
 
 ### Projects in the language server
 
