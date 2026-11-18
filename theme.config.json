@@ -72,7 +72,8 @@
     }
   ],
   "search": {
-    "provider": "local"
+    "provider": "pagefind",
+    "outputSubdir": "search"
   },
   "source": {
     "github": "kirikiroid3/kagari-doc",
