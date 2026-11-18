@@ -60,11 +60,22 @@ What the server offers depends on what precedes the cursor:
 | After `path::`, and in `use path::{…}` | What the module contains, or the variants and associated items of a type, or the items of a trait |
 | At a field of a struct expression (`Counter { … }`) | The fields not written yet, then the names in scope |
 | At a field of a struct pattern | The fields not written yet |
-| Anywhere else | Local bindings, generic parameters, the items in scope (including imports), `std`, the prelude and the primitive types; after `:` in an annotation or after `->`, only types |
+| Among items (in a file, an inline module or after `pub`) | Item keywords: `fn`, `struct`, `enum`, `type`, `const`, `static`, `mod`, `use`, `impl`, `pub`, `pushdown`; in an `impl`, `fn`, `const`, `type`, `pub`, `pushdown` |
+| Anywhere else | Local bindings, generic parameters, the items in scope (including imports), `std`, the prelude and the primitive types, then the keywords that fit; after `:` in an annotation or after `->`, only types |
+
+The keywords offered among the names depend on the position:
+
+| Position | Keywords |
+| -------- | -------- |
+| Start of a statement | `let`, the expression keywords, and the item keywords (items can be declared in blocks); `else` right after the block of an `if` that has none |
+| Inside an expression | `if`, `match`, `loop`, `while`, `for`, `true`, `false`, `crate`, `super`; `Self` in an `impl`; `return` in a function; `break` and `continue` in a loop; `mut` after `&` |
+| In a type | `crate`, `super`, `Self` in an `impl`, and `fn`, `const`, `pushdown`, `scene` for function pointer and closure types |
+| First segment of a `use` path | `crate`, `self`, `super` |
+| After `let` | `mut` only |
 
 Each completion shows the item's header or the variable's type, and its `///` doc comment.
-Completion triggers on `.` and `:`. Keywords are not offered, and nothing is offered where a new
-name is being written (`let x`, `fn f`).
+Completion triggers on `.` and `:`. Nothing is offered where a new name is being written
+(`fn f`, the name in `let x`), or in attributes and parameter or field lists.
 
 ### Projects in the language server
 
